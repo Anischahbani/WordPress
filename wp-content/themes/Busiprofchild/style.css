@@ -1,0 +1,40 @@
+/*
+
+Theme Name: Busiprof Child
+Author: Anis
+Version: 1.0
+Text Domain: busiprofchild
+Domain Path:/languages
+Description: Mon super thème enfant de Busiprof
+Template: busiprof
+
+*/
+.container{
+    padding:20px 0;
+}
+.monfooter{
+
+    background: black;
+    color: white;
+    padding: 15px 0 ;
+
+}
+.fa-chevron-left, .fa-chevron-right{
+    position: relative;
+    top:50%;
+}
+.fa-chevron-left{
+    margin-right: 50px;
+}
+.fa-chevron-right{
+    margin-left: 50px;
+}
+
+img_parallax{
+   
+    background-attachment: fixed!important ;
+    background-position: center!important ;
+    background-repeat: no-repeat!important ;
+    background-size: cover!important ;
+
+}
