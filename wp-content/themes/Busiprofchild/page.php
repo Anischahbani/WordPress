@@ -9,7 +9,7 @@ if( have_posts() ):
                 <div class="col-md-8">
                 <h2><?= get_the_title() ?></h2>
                 <p>par <?= get_the_author() ?> le <?= get_the_date() ?></p>
-                <p class="text-justify"><?= get_the_content() ?></p>
+                <p class="text-justify"><?= do_shortcode(get_the_content()) ?></p>
                 </div>
                 <div class="col-md-4">
                     <?php dynamic_sidebar('sidebar-primary'); ?><!-- on récupere le nom de la sidebar du theme parent-->

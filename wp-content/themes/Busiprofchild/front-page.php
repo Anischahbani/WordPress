@@ -7,6 +7,13 @@ if ( have_posts() ):
         
         the_post();
     ?>
+    <!--Zone widget perso-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"><?php dynamic_sidebar('sidebar-perso') ?></div>
+        </div>
+    </div>
+
     <!--Zone1-->
     <div class="container">
         <div class="row carousel-holder">
@@ -84,15 +91,37 @@ if ( have_posts() ):
            <div class="col-md-12 text-justify"><?= $p3 ?></div>
          </div>
     </div>  
-    <!--Zone4-->
-    
+    <!--Zone5-->
+    <?php
+       $vignettes = array();
+       $vignettes[] = get_field('vignette1');
+       $vignettes[] = get_field('vignette2');
+       $vignettes[] = get_field('vignette3');
+       $vignettes[] = get_field('vignette4');
+   
+    $col = 12 / (count($vignettes));
+    ?>
+      <div class= "container">
+        <div class="row">
+           <?php foreach($vignettes as $vignette ) : ?>
+                <div class="col-md-<?= $col ?>">
+                    <div class="thumbnail">
+                    <img src="<?= $vignette['url']?>" alt="<?= $vignette['alt'] ?>">
+                    <div class="caption">
+                        <?= $vignette['caption']?>
+                    </div>
+                </div>
+         </div>
+         <?php endforeach ;?>
+    </div> 
+    </div>
+    <!--Bloc Newsletter-->
     
     <div class= "container">
         <div class="row">
-           <div class="col-md-3"><?= ?></div>
+           <div class="col-md-12 "><?= do_shortcode(get_field('bloc_newsletter')) ?></div>
          </div>
-    </div>
-
+    </div> 
 
     <?php
     endwhile;

@@ -30,11 +30,18 @@ Template: busiprof
     margin-left: 50px;
 }
 
-img_parallax{
+.img_parallax{
    
     background-attachment: fixed!important ;
     background-position: center!important ;
     background-repeat: no-repeat!important ;
     background-size: cover!important ;
+
+}
+footer{
+background: lightgray;
+
+}
+.menufooter{
 
 }
